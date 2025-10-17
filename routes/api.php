@@ -50,11 +50,11 @@ Route::middleware('auth:sanctum')->group(function () {
     return response()->json(['message' => 'Logged out successfully!']);
   });
 
-  Route::apiResource('locales', LocaleController::class);
-  Route::apiResource('tags', TagController::class);
-  Route::apiResource('translations', TranslationController::class);
-
   Route::get('translations/search', [TranslationController::class, 'search']);
 
   Route::get('translations/export/{localeCode}', [TranslationController::class, 'export']);
+
+  Route::apiResource('locales', LocaleController::class);
+  Route::apiResource('tags', TagController::class);
+  Route::apiResource('translations', TranslationController::class);
 });
