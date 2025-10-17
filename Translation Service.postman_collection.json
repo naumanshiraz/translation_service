@@ -1,0 +1,604 @@
+{
+	"info": {
+		"_postman_id": "5b400222-b03e-40c0-83c0-a83b4bfaa2f0",
+		"name": "Translation Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "5866659"
+	},
+	"item": [
+		{
+			"name": "Locales",
+			"item": [
+				{
+					"name": "List all locales",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{TOKEN}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}api/locales"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new locale",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{TOKEN}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "code",
+									"value": "de",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "German",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{URL}}api/locales"
+					},
+					"response": []
+				},
+				{
+					"name": "Show a specific locale",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{TOKEN}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/locales/:id",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"locales",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a locale",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "code",
+									"value": "en",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "English",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}api/locales/:id",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"locales",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a locale",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/locales/:id",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"locales",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tags",
+			"item": [
+				{
+					"name": "List all tags",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{TOKEN}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}api/tags"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new tag",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{TOKEN}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "code",
+									"value": "de",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "German",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{URL}}api/tags"
+					},
+					"response": []
+				},
+				{
+					"name": "Show a specific tag",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{TOKEN}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/tags/:id",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"tags",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a tag",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "code",
+									"value": "en",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "English",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}api/tags/:id",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"tags",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a tag",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/tags/:id",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"tags",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Translations",
+			"item": [
+				{
+					"name": "List all translations",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{TOKEN}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}api/translations"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new translation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{TOKEN}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "locale_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "key",
+									"value": "app_key_68f2740018d04_99997",
+									"type": "text"
+								},
+								{
+									"key": "value",
+									"value": "This is a sample translation for en number 99997",
+									"type": "text"
+								},
+								{
+									"key": "tags",
+									"value": "",
+									"description": "optional tags array of IDs",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{URL}}api/translations"
+					},
+					"response": []
+				},
+				{
+					"name": "Show a specific translation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{TOKEN}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/translations/:id",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"translations",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a translation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{TOKEN}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "locale_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "key",
+									"value": "app_key_68f2740018d04_99997",
+									"type": "text"
+								},
+								{
+									"key": "value",
+									"value": "This is a sample translation for en number 99997",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}api/translations/:id",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"translations",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a translation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/translations/:id",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"translations",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search translations",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{TOKEN}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/translations/search?key=app_key_68f2740018d04_99996&content=This is a sample translation for en number 99996&locale=1",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"translations",
+								"search"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "app_key_68f2740018d04_99996"
+								},
+								{
+									"key": "content",
+									"value": "This is a sample translation for en number 99996"
+								},
+								{
+									"key": "locale",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Export all translations",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{TOKEN}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/translations/export/:localeCode",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"translations",
+								"export",
+								":localeCode"
+							],
+							"variable": [
+								{
+									"key": "localeCode",
+									"value": "en"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "test@example.test",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{URL}}api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{TOKEN}}"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "{{URL}}api/logout"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "TOKEN",
+			"value": ""
+		},
+		{
+			"key": "URL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
